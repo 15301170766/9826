@@ -1,0 +1,567 @@
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d
+$ cd ./txsp/
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp
+$ git clone Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+bash: syntax error near unexpected token `('
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp
+$ $ git clone
+bash: $: command not found
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp
+$ git clone https://github.com/15301170766/9826.git
+Cloning into '9826'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp
+$ cd 9826
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp/9826 (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        9641.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp/9826 (master)
+$ git add .
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp/9826 (master)
+$ git commit -m '生成配置文件'
+[master 31a79e8] 生成配置文件
+ 1 file changed, 1 insertion(+)
+ create mode 100644 9641.txt
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp/9826 (master)
+$ git push
+ Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/15301170766/9826.git
+   c8cf38f..31a79e8  master -> master
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /d/txsp/9826 (master)
+$  cd E:/github/ceshi/douyin
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git pull origin master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/15301170766/9826
+ * branch            master     -> FETCH_HEAD
+   c8cf38f..31a79e8  master     -> origin/master
+Updating c8cf38f..31a79e8
+Fast-forward
+ 9641.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 9641.txt
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git log
+commit 31a79e87e113c5e92470b7464db71b33b9b73765
+Author: 雨中漫步步 <liuyuanyuan>
+Date:   Fri Jul 14 19:21:44 2017 +0800
+
+    生成配置文件
+
+commit c8cf38fd45306baa4a019c688dca2e2f038a18ad
+Author: 雨中漫步步 <liuyuanyuan>
+Date:   Fri Jul 14 19:10:05 2017 +0800
+
+    lianshou bieming
+
+commit 2381b6ac353de36e43d43549f9e9a5d0b67e9eb4
+Author: 雨中漫步步 <liuyuanyuan>
+Date:   Fri Jul 14 19:00:06 2017 +0800
+
+    first commit
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git log --pretty=one
+31a79e87e113c5e92470b7464db71b33b9b73765 生成配置文件
+c8cf38fd45306baa4a019c688dca2e2f038a18ad lianshou bieming
+2381b6ac353de36e43d43549f9e9a5d0b67e9eb4 first commit
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git log --pretty=oneline
+31a79e87e113c5e92470b7464db71b33b9b73765 生成配置文件
+c8cf38fd45306baa4a019c688dca2e2f038a18ad lianshou bieming
+2381b6ac353de36e43d43549f9e9a5d0b67e9eb4 first commit
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git reset --hard HEAD^^
+HEAD is now at 2381b6a first commit
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git reset --hard c8cf
+HEAD is now at c8cf38f lianshou bieming
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git reflog
+c8cf38f HEAD@{0}: reset: moving to c8cf
+2381b6a HEAD@{1}: reset: moving to HEAD^^
+31a79e8 HEAD@{2}: pull origin master: Fast-forward
+c8cf38f HEAD@{3}: commit: lianshou bieming
+2381b6a HEAD@{4}: commit (initial): first commit
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git reset --hard 31a7
+HEAD is now at 31a79e8 生成配置文件
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git reset --hard c8cf
+HEAD is now at c8cf38f lianshou bieming
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git reset --hard 2381
+HEAD is now at 2381b6a first commit
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git branch
+* master
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git reset --hard 31a7
+HEAD is now at 31a79e8 生成配置文件
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git branch wechat
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git branch
+* master
+  wechat
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git checkout wechat
+Switched to branch 'wechat'
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ ls
+9641.txt  vue.txt
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git branch
+  master
+* wechat
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git status
+On branch wechat
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   9641.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git add .
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git commit -m 'wechat img'
+[wechat 522e2e0] wechat img
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git branch ali
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git branch
+  ali
+* master
+  wechat
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git checkout ali
+Switched to branch 'ali'
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (ali)
+$ git status
+On branch ali
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   9641.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        "\346\210\221\346\230\257\350\260\201.txt"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (ali)
+$ git branch
+* ali
+  master
+  wechat
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (ali)
+$ git stutas
+git: 'stutas' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (ali)
+$ git status
+On branch ali
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   9641.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        "\346\210\221\346\230\257\350\260\201.txt"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (ali)
+$ git add .
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (ali)
+$ git commit -m 'ali over'
+[ali d6650d2] ali over
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 "\346\210\221\346\230\257\350\260\201.txt"
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (ali)
+$ git branch
+* ali
+  master
+  wechat
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (ali)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git branch
+  ali
+* master
+  wechat
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git merge ali
+Updating 31a79e8..d6650d2
+Fast-forward
+ 9641.txt                                   | 4 +++-
+ "\346\210\221\346\230\257\350\260\201.txt" | 1 +
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 "\346\210\221\346\230\257\350\260\201.txt"
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git checkout wechat
+Switched to branch 'wechat'
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git status
+On branch wechat
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   vue.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        "\344\273\226\350\257\225\350\257\225.txt"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git commit -m '微信制作完 cheng'
+On branch wechat
+Changes not staged for commit:
+        modified:   vue.txt
+
+Untracked files:
+        "\344\273\226\350\257\225\350\257\225.txt"
+
+no changes added to commit
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git add .
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git commit -m '微信完成'
+[wechat bf0a423] 微信完成
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 "\344\273\226\350\257\225\350\257\225.txt"
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (wechat)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git merge wechat
+Auto-merging 9641.txt
+CONFLICT (content): Merge conflict in 9641.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+
+        modified:   vue.txt
+        new file:   "\344\273\226\350\257\225\350\257\225.txt"
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   9641.txt
+
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master|MERGING)
+$ git add .
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master|MERGING)
+$ git commit -m "修改冲 "
+[master 11d41e2] 修改冲突
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git push origin master
+Counting objects: 14, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (14/14), 1.30 KiB | 0 bytes/s, done.
+Total 14 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/15301170766/9826.git
+   31a79e8..11d41e2  master -> master
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ cd ..
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi
+$ ls
+douyin/  rrdai/
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi
+$ cd rrdai
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remote -v
+origin  https://git.oschina.net/summeryuan/lianshou.git (fetch)
+origin  https://git.oschina.net/summeryuan/lianshou.git (push)
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remote remove origin
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remote add haha https://github.com/15301170766/9826.git
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remote -v
+haha    https://github.com/15301170766/9826.git (fetch)
+haha    https://github.com/15301170766/9826.git (push)
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git push haha master
+To https://github.com/15301170766/9826.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/15301170766/9826.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remote -v
+haha    https://github.com/15301170766/9826.git (fetch)
+haha    https://github.com/15301170766/9826.git (push)
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remote remove haha
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remove -v
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+        remote
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remote -v
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remote add origin git@github.com:15301170766/9826.git
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git remote -v
+origin  git@github.com:15301170766/9826.git (fetch)
+origin  git@github.com:15301170766/9826.git (push)
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ ssh-keygen -t rsa -c '15301170766@163.com'
+Too many arguments.
+usage: ssh-keygen [-q] [-b bits] [-t dsa | ecdsa | ed25519 | rsa | rsa1]
+                  [-N new_passphrase] [-C comment] [-f output_keyfile]
+       ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
+       ssh-keygen -i [-m key_format] [-f input_keyfile]
+       ssh-keygen -e [-m key_format] [-f input_keyfile]
+       ssh-keygen -y [-f input_keyfile]
+       ssh-keygen -c [-P passphrase] [-C comment] [-f keyfile]
+       ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+       ssh-keygen -B [-f input_keyfile]
+       ssh-keygen -D pkcs11
+       ssh-keygen -F hostname [-f known_hosts_file] [-l]
+       ssh-keygen -H [-f known_hosts_file]
+       ssh-keygen -R hostname [-f known_hosts_file]
+       ssh-keygen -r hostname [-f input_keyfile] [-g]
+       ssh-keygen -G output_file [-v] [-b bits] [-M memory] [-S start_point]
+       ssh-keygen -T output_file -f input_file [-v] [-a rounds] [-J num_lines]
+                  [-j start_line] [-K checkpt] [-W generator]
+       ssh-keygen -s ca_key -I certificate_identity [-h] [-n principals]
+                  [-O option] [-V validity_interval] [-z serial_number] file ...
+       ssh-keygen -L [-f input_keyfile]
+       ssh-keygen -A
+       ssh-keygen -k -f krl_file [-u] [-s ca_public] [-z version_number]
+                  file ...
+       ssh-keygen -Q -f krl_file file ...
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ ssh-keygen -t rsa -C '15301170766@163.com'
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Shinelon/.ssh/id_rsa):
+Created directory '/c/Users/Shinelon/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Shinelon/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Shinelon/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:gTaSOfdygFkxUbsVkvCxUj/rV0BLbueUJUmeeKQ8jZ0 15301170766@163.com
+The key's randomart image is:
++---[RSA 2048]----+
+|      *==.. o.+..|
+|     * =.* * X.* |
+|    B B = + @ E  |
+|     = = + + B   |
+|      . S .   o  |
+|       o .   .   |
+|          . .    |
+|           .     |
+|                 |
++----[SHA256]-----+
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        "\346\262\241\346\234\211\345\257\206\347\240\201.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git add .
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git commit -m '没有密 '
+[master 94ad691] 没有密码
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 "\346\262\241\346\234\211\345\257\206\347\240\201.txt"
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ git push origin master
+The authenticity of host 'github.com (192.30.255.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,192.30.255.112' (RSA) to the list of known hosts.
+To github.com:15301170766/9826.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:15301170766/9826.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/rrdai (master)
+$ cd ..
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi
+$ cd douyin
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        "\346\262\241\346\234\211\345\257\206\347\240\201.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git add .
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git commit -m '测试完成'
+[master b6e1b74] 测试完成
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 "\346\262\241\346\234\211\345\257\206\347\240\201.txt"
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/15301170766/9826.git
+   11d41e2..b6e1b74  master -> master
+
+Shinelon@DESKTOP-POVTHTU MINGW32 /e/github/ceshi/douyin (master)
